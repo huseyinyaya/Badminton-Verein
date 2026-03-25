@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Verein</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #22c55e, #06b6d4);
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #1e293b;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #22c55e;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #22c55e;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #22c55e;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        button {
+            background: #06b6d4;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0891b2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    🏸 Badminton Verein
+</header>
+
+<nav>
+    <a href="#zeiten">Trainingszeiten</a>
+    <a href="#teams">Mannschaften</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="zeiten">
+    <h2>Trainingszeiten</h2>
+    <div class="card">
+        <p><strong>Jugend:</strong> Montag & Mittwoch – 17:00 bis 19:00</p>
+        <p><strong>Erwachsene:</strong> Montag & Mittwoch – 19:00 bis 21:30</p>
+        <p><strong>Freies Spiel:</strong> Freitag – 18:00 bis 21:00</p>
+    </div>
+</section>
+
+<section id="teams">
+    <h2>Mannschaften</h2>
+    <div class="card">
+        <p>🏆 1. Mannschaft – Bezirksliga</p>
+        <p>🥈 2. Mannschaft – Kreisliga</p>
+        <p>👶 Jugendteam – Aufbau & Training</p>
+    </div>
+
+    <a class="btn" href="https://www.turnier.de" target="_blank">
+        Zu Turnier.de
+    </a>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <div class="card">
+        <form>
+            <input type="text" placeholder="Dein Name" required>
+            <input type="email" placeholder="Deine E-Mail" required>
+            <textarea rows="5" placeholder="Deine Nachricht"></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+
+    <a class="btn" href="https://instagram.com" target="_blank">
+        Folge uns auf Instagram
+    </a>
+</section>
+
+<footer>
+    © 2026 Badminton Verein | Alle Rechte vorbehalten
+</footer>
+
+</body>
+</html>
