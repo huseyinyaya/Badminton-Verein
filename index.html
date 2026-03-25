@@ -1,167 +1,213 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Datteln 09 Badminton</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV Datteln 09 Badminton</title>
 
-        header {
-            background: linear-gradient(90deg, #22c55e, #06b6d4);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #1e293b;
-            padding: 10px;
-        }
+/* NAVBAR MIT LOGO */
+nav {
+    position: sticky;
+    top: 0;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 100;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        nav a:hover {
-            color: #22c55e;
-        }
+nav .logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid white;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav .links {
+    display: flex;
+    gap: 20px;
+}
 
-        h2 {
-            color: #22c55e;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
+nav a:hover {
+    color: #22c55e;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #22c55e;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
+/* HERO */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('https://images.unsplash.com/photo-1584467735871-8c7c6c0d8d09');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        .btn:hover {
-            background: #16a34a;
-        }
+.hero h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+.hero p {
+    font-size: 20px;
+    opacity: 0.8;
+}
 
-        input, textarea {
-            padding: 10px;
-            border-radius: 6px;
-            border: none;
-        }
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        button {
-            background: #06b6d4;
-            border: none;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.btn:hover {
+    transform: scale(1.05);
+    background: #16a34a;
+}
 
-        button:hover {
-            background: #0891b2;
-        }
+/* SECTIONS */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e293b;
-            margin-top: 40px;
-        }
-    </style>
+h2 {
+    color: #22c55e;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+/* FORM */
+input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background: #06b6d4;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0891b2;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    margin-top: 40px;
+}
+</style>
 </head>
 <body>
 
-<header>
-    🏸 TV Datteln 09 Badminton
-</header>
-
+<!-- NAVBAR MIT LOGO -->
 <nav>
-    <a href="#zeiten">Trainingszeiten</a>
-    <a href="#teams">Mannschaften</a>
-    <a href="#kontakt">Kontakt</a>
+    <div class="logo">
+        <img src="logo.png" alt="TV Datteln 09 Logo">
+        <span>TV Datteln 09 Badminton</span>
+    </div>
+    <div class="links">
+        <a href="#zeiten">Trainingszeiten</a>
+        <a href="#Orte">Sporthallen</a>
+        <a href="#teams">Mannschaften</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
 </nav>
 
+<!-- HERO -->
+<div class="hero">
+    <h1>🏸 Willkommen bei TV Datteln 09</h1>
+    <p>Schnelligkeit. Technik. Teamgeist.</p>
+    <a href="#kontakt" class="btn">Jetzt mitmachen</a>
+</div>
+
+<!-- TRAININGSZEITEN -->
 <section id="zeiten">
     <h2>Trainingszeiten</h2>
     <div class="card">
-        <p><strong>Kinder: </strong>Montag                 17:00 bis 18:00</p>  
-                           </strong>Freitag                17:00 bis 20:00</p>
-        <p><strong>Jugend ( Mannschaftsspieler ):</strong> Montag & Mittwoch – 18:00 bis 20:00</p>
-        <p><strong>Jugend:</strong> Freitag – 18:00 bis 20:00</p>
-        <p><strong>Erwachsene:</strong> Montag & Mittwoch – 20:00 bis 22:00</p>
-        <p><strong>Freies Spiel Erwachsene:</strong> Dienstag & Freitag – 20:00 bis 22:00</p>
+        <p><strong>Kinder: </strong>Montag 17:00–18:00<br>Freitag 17:00–20:00</p>
+        <p><strong>Jugend (Mannschaftsspieler):</strong> Montag & Mittwoch – 18:00–20:00</p>
+        <p><strong>Jugend: </strong>Freitag – 18:00–20:00</p>
+        <p><strong>Erwachsene: </strong>Montag & Mittwoch – 20:00–22:00</p>
+        <p><strong>Freies Spiel Erwachsene: </strong>Dienstag & Freitag – 20:00–22:00</p>
     </div>
 </section>
 
-   
-    <section id="Orte">
-        <h2>Sporthallen</h2>
-        <div class="card">
-           <p><strong>Montag ALLE:</strong> Realschule Datteln Wiesenstraße 12, 45711 Datteln</p>
-           <p><strong>Mittwoch ALLE:</strong> Berufskolleg Ostvest Hans-Böckler-Straße 2, 45711 Datteln</p> 
-           <p><strong>Freies Spiel:</strong> Berufskolleg Ostvest Hans-Böckler-Straße 2, 45711 Datteln</p>
-           <p><strong>Freitag Kinder & Jugend:</strong> Comenius-Gymnasium Datteln unterm Statdbad Wiesenstraße 1, 45711 Datteln</p>
-           <p><strong>Spieltage:</strong> Gustav-Adolf-Schule Mozartstraße 1, 45711 Datteln</p>
-        </div>
-    </section>        
-
-
-
-
-        
-<section id="teams">
-    <h2>AKtuelle Saison</h2>
+<!-- SPORTHALLEN -->
+<section id="Orte">
+    <h2>Sporthallen</h2>
     <div class="card">
-        <p> 1. Mannschaft – Verbandsliga <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=741">Klick</a></p>
-        <p> 2. Mannschaft – Landesliga <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=742">Klick</a></p>
-        <p> 3. Mannschaft - Bezirksliga <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=743">Klick</a></p>
-        <p> 4. Mannschaft - Bezirksklasse <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=744">Klick</a></p>
-        <p> 5. Mannschaft - Bezirksklasse <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=745">Klick</a></p>
-        <p> 6. Mannschaft - Kreisliga <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=747">Klick</a></p>
-        <p> U13 Mini Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=748">Klick</a></p>
-        <p> U11 Mini Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&team=749">Klick</a></p>
-        <p> Schülermannschaft <a href="https://dbv.turnier.de/sport/league/draw?id=925D6245-1FA1-496D-9810-1439487E5801&draw=140">Klick</a></p>
+        <p><strong>Montag ALLE:</strong> Realschule Datteln, Wiesenstraße 12</p>
+        <p><strong>Mittwoch ALLE:</strong> Berufskolleg Ostvest, Hans-Böckler-Straße 2</p>
+        <p><strong>Freies Spiel:</strong> Berufskolleg Ostvest, Hans-Böckler-Straße 2</p>
+        <p><strong>Freitag Kinder & Jugend:</strong> Comenius-Gymnasium, Wiesenstraße 1</p>
+        <p><strong>Spieltage:</strong> Gustav-Adolf-Schule, Mozartstraße 1</p>
     </div>
-
-    <a class="btn" href="https://dbv.turnier.de/sport/league/club?id=925D6245-1FA1-496D-9810-1439487E5801&club=372" target="_blank">
-        Zu Turnier.de
-    </a>
 </section>
 
+<!-- MANNSCHAFTEN -->
+<section id="teams">
+    <h2>Aktuelle Saison</h2>
+    <div class="card">
+        <p>1. Mannschaft – Verbandsliga <a href="https://dbv.turnier.de/sport/league/team?id=741">Klick</a></p>
+        <p>2. Mannschaft – Landesliga <a href="https://dbv.turnier.de/sport/league/team?id=742">Klick</a></p>
+        <p>3. Mannschaft - Bezirksliga <a href="https://dbv.turnier.de/sport/league/team?id=743">Klick</a></p>
+        <p>4. Mannschaft - Bezirksklasse <a href="https://dbv.turnier.de/sport/league/team?id=744">Klick</a></p>
+        <p>5. Mannschaft - Bezirksklasse <a href="https://dbv.turnier.de/sport/league/team?id=745">Klick</a></p>
+        <p>6. Mannschaft - Kreisliga <a href="https://dbv.turnier.de/sport/league/team?id=747">Klick</a></p>
+        <p>U13 Mini Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=748">Klick</a></p>
+        <p>U11 Mini Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=749">Klick</a></p>
+        <p>Schülermannschaft <a href="https://dbv.turnier.de/sport/league/draw?id=140">Klick</a></p>
+    </div>
+    <a class="btn" href="https://dbv.turnier.de/sport/league/club?id=372" target="_blank">Zu Turnier.de</a>
+</section>
+
+<!-- KONTAKT -->
 <section id="kontakt">
     <h2>Kontakt</h2>
     <div class="card">
@@ -172,14 +218,11 @@
             <button type="submit">Senden</button>
         </form>
     </div>
-
-    <a class="btn" href="https://www.instagram.com/tvdattelnbadminton?igsh=MWFmd3NsejM4cXhoNQ==" target="_blank">
-        Schreib uns auf Instagram
-    </a>
+    <a class="btn" href="https://www.instagram.com/tvdattelnbadminton" target="_blank">Schreib uns auf Instagram</a>
 </section>
 
 <footer>
-    © 2026 Badminton Verein | Alle Rechte vorbehalten
+    © 2026 TV Datteln 09 Badminton | Alle Rechte vorbehalten
 </footer>
 
 </body>
